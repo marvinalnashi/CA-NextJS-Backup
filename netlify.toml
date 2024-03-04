@@ -1,0 +1,8 @@
+[build]
+  command = "yarn build"
+  publish = ".next"
+
+[build.environment]
+  CA_NEXT_ISR = "false"
+  CA_NEXT_FEATURE_IMAGES = "false"
+  CA_NEXT_INLINE_IMAGES = "false"
