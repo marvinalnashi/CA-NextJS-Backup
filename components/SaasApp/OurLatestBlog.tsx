@@ -7,6 +7,7 @@ import { Layout } from '@components/Layout'
 import { HeaderPage } from '@components/HeaderPage'
 import { PostCard } from '@components/PostCard'
 import { getLang, get } from '@utils/use-lang'
+import {HomePostCard} from "@components/HomePostCard";
 
 // export const getStaticProps: GetStaticProps = async () => {
 //   // const posts = await getAllPosts({ limit: 3 })
@@ -32,15 +33,13 @@ const HomeBlog: React.FC<HomeBlogProps> = ({ posts, settings, bodyClass }) => {
   const text = get(getLang(settings.lang));
 
   return (
-    <Layout {...{ settings, bodyClass }} header={<HeaderPage {...{ settings }} />} errorClass="error-content">
       <div className="inner">
         <div className="post-feed">
           {posts.map((post, i) => (
-            <PostCard key={post.id} {...{ settings, post, num: i }} />
+            <HomePostCard key={post.id} {...{ settings, post, num: i }} />
           ))}
         </div>
       </div>
-    </Layout>
   )
 }
 
