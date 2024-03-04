@@ -36,7 +36,7 @@ const HeroBanner: React.FC = () => {
               <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" data-aos-once="true">
                 <Link
                   href="#"
-                  className="py-[15px] px-[30px] inline-block rounded-[6px] bg-primary-color text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-black-color"
+                  className="py-[15px] px-[30px] inline-block rounded-[6px] bg-primary text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-black-color"
                 >
                   Start Free Trial
                 </Link>
@@ -56,7 +56,7 @@ const HeroBanner: React.FC = () => {
                 </div>
 
                 <div>
-                  <div className="text-[#FFC107] space-x-[3px] rtl:space-x-reverse text-[16px]">
+                  <div className="text-yellow-400 space-x-[3px] rtl:space-x-reverse text-[16px]">
                     <i className="ri-star-fill"></i>
                     <i className="ri-star-fill"></i>
                     <i className="ri-star-fill"></i>
@@ -74,7 +74,7 @@ const HeroBanner: React.FC = () => {
           </div>
         </div>
 
-        <Image src={bannerVector} alt="shape" className="absolute bottom-0 left-0 bg-[#fff] w-full" />
+        <Image src={bannerVector} alt="shape" className="absolute bottom-0 left-0 bg-white w-full" />
       </div>
     </>
   )

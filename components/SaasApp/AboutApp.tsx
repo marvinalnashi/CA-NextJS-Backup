@@ -47,7 +47,7 @@ const AboutApp: React.FC = () => {
                   {featuresData &&
                     featuresData.slice(0, 3).map((value, i) => (
                       <div className="flex space-x-[18px] rtl:space-x-reverse group" key={i}>
-                        <div className="bg-[#F5F5F5] w-[60px] h-[60px] leading-[60px] rounded-full text-center shrink-0 text-primary-color text-[30px] transition duration-500 ease-in-out group-hover:bg-primary-color group-hover:text-white">
+                        <div className="bg-neutral-100 w-[60px] h-[60px] leading-[60px] rounded-full text-center shrink-0 text-primary-color text-[30px] transition duration-500 ease-in-out group-hover:bg-primary group-hover:text-white">
                           <i className={value.icon}></i>
                         </div>
                         <div>
@@ -68,7 +68,7 @@ const AboutApp: React.FC = () => {
               >
                 <Link
                   href="#"
-                  className="py-[15px] px-[30px] inline-block rounded-[6px] bg-primary-color text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-black-color"
+                  className="py-[15px] px-[30px] inline-block rounded-[6px] bg-primary text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-black-color"
                 >
                   Get Started 7 Days Free Trial
                 </Link>

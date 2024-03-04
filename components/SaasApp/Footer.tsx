@@ -67,7 +67,7 @@ const socialLinksData = [
 const Footer: React.FC = () => {
   return (
     <>
-      <footer className="bg-[#080D27] py-[50px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
+      <footer className="bg-slate-900 py-[50px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
         <div className="container">
           <div className="grid gap-[20px] items-center grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
             <div className="text-center lg:text-start" data-aos="fade-in" data-aos-delay="100" data-aos-duration="600" data-aos-once="false">
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                 >
                   {navLinkData &&
                     navLinkData.map((value, i) => (
-                      <li className="inline-block font-semibold text-[#BFC3E1] hover:text-primary-color" key={i}>
+                      <li className="inline-block font-semibold text-slate-300 hover:text-primary-color" key={i}>
                         <Link href={value.link}>{value.text}</Link>
                       </li>
                     ))}
@@ -96,11 +96,11 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <hr className="border-[#384179] my-[30px] md:my-[50px]" />
+          <hr className="border-indigo-900 my-[30px] md:my-[50px]" />
 
           <div className="grid gap-[15px] items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
             <div className="text-center md:text-start" data-aos="fade-in" data-aos-delay="300" data-aos-duration="600" data-aos-once="false">
-              <p className="text-[#BFC3E1]">
+              <p className="text-slate-300">
                 © <span className="text-white">Plama</span>. All Rights Reserved by{' '}
                 <a href="https://envytheme.com/" target="_blank" className="text-white hover:text-primary-color">
                   EnvyTheme
@@ -118,17 +118,17 @@ const Footer: React.FC = () => {
                           href={value.link}
                           target="_blank"
                           className="
-                          bg-[#384179]
+                          bg-indigo-900
                             w-[30px]
                             h-[30px]
                             leading-[30px]
                             text-center
                             rounded-full
                             text-[14px]
-                            text-[#BFC3E1]
+                            text-slate-300
                             inline-block
                             transition duration-500 ease-in-out
-                            hover:bg-primary-color
+                            hover:bg-primary
                             hover:text-white
                           "
                         >

@@ -108,14 +108,14 @@ const Navbar: React.FC = () => {
               <div className="other-options self-center space-x-[20px] lg:space-x-[25px] xl:space-x-[45px] rtl:space-x-reverse">
                 <Link
                   href="/login"
-                  className="text-[16px] md:text-[15px] lg:text-[18px] inline-block text-primary-color font-semibold transition duration-500 ease-in-out hover:text-[#061257]"
+                  className="text-[16px] md:text-[15px] lg:text-[18px] inline-block text-primary-color font-semibold transition duration-500 ease-in-out hover:text-blue-950"
                 >
                   Log In
                 </Link>
 
                 <Link
                   href="/register"
-                  className="py-[10px] md:py-[8px] lg:py-[12px] xl:py-[15px] px-[20px] md:px-[15px] lg:px-[20px] xl:px-[30px] inline-block rounded-[6px] bg-[#A673EE] text-white font-semibold text-[14px] md:text-[13px] lg:text-[16px] xl:text-[18px] transition duration-500 ease-in-out hover:bg-primary-color"
+                  className="py-[10px] md:py-[8px] lg:py-[12px] xl:py-[15px] px-[20px] md:px-[15px] lg:px-[20px] xl:px-[30px] inline-block rounded-[6px] bg-violet-400 text-white font-semibold text-[14px] md:text-[13px] lg:text-[16px] xl:text-[18px] transition duration-500 ease-in-out hover:bg-primary"
                 >
                   Get Started
                 </Link>

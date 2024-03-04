@@ -21,7 +21,7 @@ const PromoVideo: React.FC = () => {
 
           <div className="absolute top-1/2 -translate-y-2/4 right-0 left-0 w-full text-center ">
             <div
-              className="bg-primary-color text-white cursor-pointer w-[80px] md:w-[115px] h-[80px] md:h-[115px] mx-auto leading-[80px] md:leading-[115px] pl-[5px] rounded-full text-center text-[35px] md:text-[45px] transition duration-500 ease-in-out hover:bg-[#c4302b] hover:scale-[1.1]"
+              className="bg-primary text-white cursor-pointer w-[80px] md:w-[115px] h-[80px] md:h-[115px] mx-auto leading-[80px] md:leading-[115px] pl-[5px] rounded-full text-center text-[35px] md:text-[45px] transition duration-500 ease-in-out hover:bg-red-600 hover:scale-[1.1]"
               onClick={() => setToggler(!toggler)}
             >
               <i className="flaticon-play-button"></i>

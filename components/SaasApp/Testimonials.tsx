@@ -135,7 +135,7 @@ const testimonialsData = [
 const Testimonials: React.FC = () => {
   return (
     <>
-      <div id="testimonials" className="bg-[#F7F1FF] py-[50px] md:py-[70px] lg:py-[100px] xl:py-[120px]">
+      <div id="testimonials" className="bg-violet-50 py-[50px] md:py-[70px] lg:py-[100px] xl:py-[120px]">
         <div className="container">
           <div
             className="max-w-[650px] mx-auto text-center mb-[30px] md:mb-[40px] lg:mb-[60px]"
@@ -186,7 +186,7 @@ const Testimonials: React.FC = () => {
                           {value && (
                             <div className="space-x-[2px] rtl:space-x-reverse">
                               {value.rating.map((value, i) => (
-                                <div className="bg-[#00B67A] text-white text-[15px] w-[24px] h-[24px] leading-[24px] inline-block text-center" key={i}>
+                                <div className="bg-emerald-500 text-white text-[15px] w-[24px] h-[24px] leading-[24px] inline-block text-center" key={i}>
                                   <i className={value.icon}></i>
                                 </div>
                               ))}

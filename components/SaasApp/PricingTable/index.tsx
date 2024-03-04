@@ -22,17 +22,17 @@ const PricingTable: React.FC = () => {
 
           {/* Tab menu */}
           <div className="text-center">
-            <div className="bg-[#F9F3EF] rounded-[30px] inline-block">
+            <div className="bg-red-50 rounded-[30px] inline-block">
               <ul className="flex items-center justify-center">
                 <li
                   onClick={() => handleTabClick(0)}
-                  className={`cursor-pointer text-[16px] font-medium uppercase px-[45px] py-[10px] rounded-l-[30px] ${activeTab === 0 ? 'bg-[#D4EDFF] rounded-r-[30px]' : ''}`}
+                  className={`cursor-pointer text-[16px] font-medium uppercase px-[45px] py-[10px] rounded-l-[30px] ${activeTab === 0 ? 'bg-blue-100 rounded-r-[30px]' : ''}`}
                 >
                   Monthly
                 </li>
                 <li
                   onClick={() => handleTabClick(1)}
-                  className={`cursor-pointer text-[16px] font-medium uppercase px-[45px] py-[10px] rounded-r-[30px] ${activeTab === 1 ? 'bg-[#D4EDFF] rounded-l-[30px]' : ''}`}
+                  className={`cursor-pointer text-[16px] font-medium uppercase px-[45px] py-[10px] rounded-r-[30px] ${activeTab === 1 ? 'bg-blue-100 rounded-l-[30px]' : ''}`}
                 >
                   Yearly
                 </li>

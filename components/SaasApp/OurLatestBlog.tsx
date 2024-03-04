@@ -56,7 +56,7 @@ const OurLatestBlog: React.FC = () => {
                       <Image src={value.image} alt="blog" className="rounded-t-[20px]" width={1270} height={900} />
                     </Link>
 
-                    <div className="bg-white rounded-[20px] py-[40px] px-[30px] relative mt-[-16px] transition duration-500 ease-in-out group-hover:bg-[#F7F1FF]">
+                    <div className="bg-white rounded-[20px] py-[40px] px-[30px] relative mt-[-16px] transition duration-500 ease-in-out group-hover:bg-violet-50">
                       <p className="uppercase text-[15px] mb-[10px]">{value.category}</p>
 
                       <h3 className="text-[20px] xl:text-[22px] leading-[32px] mb-[15px]">
@@ -85,7 +85,7 @@ const OurLatestBlog: React.FC = () => {
           <div className="text-center mt-[30px] md:mt-[40px]" data-aos="fade-in" data-aos-delay="100" data-aos-duration="600" data-aos-once="false">
             <Link
               href="/blog"
-              className="py-[15px] px-[30px] inline-block rounded-[6px] bg-primary-color text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-black-color hover:text-white"
+              className="py-[15px] px-[30px] inline-block rounded-[6px] bg-primary text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-black-color hover:text-white"
             >
               See All News
             </Link>

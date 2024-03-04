@@ -35,11 +35,11 @@ const Newsletter: React.FC = () => {
                     <input
                       type="email"
                       placeholder="Enter your email address"
-                      className="bg-white rounded-[6px] text-[15px] py-[17.2px] px-[22px] block w-full focus:outline-none placeholder-[#384179]"
+                      className="bg-white rounded-[6px] text-[15px] py-[17.2px] px-[22px] block w-full focus:outline-none placeholder-indigo-900"
                     />
                     <button
                       type="submit"
-                      className="py-[15px] px-[30px] inline-block rounded-[6px] bg-black-color text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-primary-color sm:absolute top-0 right-0 mt-[20px] sm:mt-[0]"
+                      className="py-[15px] px-[30px] inline-block rounded-[6px] bg-black text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-primary sm:absolute top-0 right-0 mt-[20px] sm:mt-[0]"
                     >
                       Get Started Free
                     </button>
