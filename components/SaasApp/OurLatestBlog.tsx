@@ -1,8 +1,30 @@
 'use client'
-
+import {GetStaticProps} from "next";
 import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import {getAllPosts, getAllSettings, GhostPostOrPage, GhostPostsOrPages, GhostSettings} from "@lib/ghost";
+import {ISeoImage, seoImage} from "@meta/seoImage";
+import {SEO} from "@meta/seo";
+import {StickyNavContainer} from "@effects/StickyNavContainer";
+import {Layout} from "@components/Layout";
+import {HeaderIndex} from "@components/HeaderIndex";
+import {PostView} from "@components/PostView";
+import {BodyClass} from "@helpers/BodyClass";
+import {processEnv} from "@lib/processEnv";
+import {useRouter} from "next/router";
+
+interface CmsData {
+  posts: GhostPostsOrPages
+  settings: GhostSettings
+  seoImage: ISeoImage
+  previewPosts?: GhostPostsOrPages
+  prevPost?: GhostPostOrPage
+  nextPost?: GhostPostOrPage
+  bodyClass: string
+}
+
+interface IndexProps {
+  cmsData: CmsData
+}
 
 const blogData = [
   {
@@ -37,63 +59,114 @@ const blogData = [
   },
 ]
 
-const OurLatestBlog: React.FC = () => {
+export default function Index({ cmsData }: IndexProps) {
+  const router = useRouter()
+
+  if (router.isFallback) return <div>Loading...</div>
+
+  const { settings, posts, seoImage, bodyClass } = cmsData
   return (
     <>
-      <div id="blog" className="py-[50px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
-        <div className="container">
-          <div className="max-w-[650px] mx-auto text-center mb-[30px] md:mb-[40px]" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" data-aos-once="false">
-            <h6 className="uppercase text-[16px] md:text-[18px] font-medium mb-[5px]">our blog</h6>
-            <h2 className="text-[28px] md:text-[36px] leading-[36px] md:leading-[45px]">Our latest insights are on top of all times</h2>
-          </div>
 
-          {blogData && (
-            <div className="grid gap-[25px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              {blogData &&
-                blogData.slice(0, 3).map((value, i) => (
-                  <div className="bg-white rounded-[20px] group" data-aos="fade-up" data-aos-delay={value.aosDelay} data-aos-duration="600" data-aos-once="false" key={i}>
-                    <Link href={value.previewLink}>
-                      <Image src={value.image} alt="blog" className="rounded-t-[20px]" width={1270} height={900} />
-                    </Link>
+      <SEO {...{settings, seoImage}} />
+      <StickyNavContainer
+        throttle={300}
+        activeClass="fixed-nav-active"
+        render={(sticky) => (
+          <Layout {...{bodyClass, sticky, settings, isHome: true}} header={<HeaderIndex {...{settings}} />}>
+            <PostView {...{settings, posts, isHome: true}} />
+          </Layout>
+        )}
+      />
 
-                    <div className="blog-card-border bg-white rounded-[20px] py-[40px] px-[30px] relative mt-[-16px] transition duration-500 ease-in-out group-hover:bg-violet-50">
-                      <p className="uppercase text-[15px] mb-[10px]">{value.category}</p>
+      {/*<div id="blog" className="py-[50px] md:py-[80px] lg:py-[100px] xl:py-[120px]">*/}
+      {/*  <div className="container">*/}
+      {/*    <div className="max-w-[650px] mx-auto text-center mb-[30px] md:mb-[40px]" data-aos="fade-up"*/}
+      {/*         data-aos-delay="100" data-aos-duration="600" data-aos-once="false">*/}
+      {/*      <h6 className="uppercase text-[16px] md:text-[18px] font-medium mb-[5px]">our blog</h6>*/}
+      {/*      <h2 className="text-[28px] md:text-[36px] leading-[36px] md:leading-[45px]">Our latest insights are on top*/}
+      {/*        of all times</h2>*/}
+      {/*    </div>*/}
 
-                      <h3 className="text-[20px] xl:text-[22px] leading-[32px] mb-[15px]">
-                        <Link href={value.previewLink} className="transition duration-500 ease-in-out hover:text-primary">
-                          {value.title}
-                        </Link>
-                      </h3>
+      {/*    {blogData && (*/}
+      {/*      <div className="grid gap-[25px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">*/}
+      {/*        {blogData &&*/}
+      {/*          blogData.slice(0, 3).map((value, i) => (*/}
+      {/*            <div className="bg-white rounded-[20px] group" data-aos="fade-up" data-aos-delay={value.aosDelay}*/}
+      {/*                 data-aos-duration="600" data-aos-once="false" key={i}>*/}
+      {/*              <Link href={value.previewLink}>*/}
+      {/*                <Image src={value.image} alt="blog" className="rounded-t-[20px]" width={1270} height={900}/>*/}
+      {/*              </Link>*/}
 
-                      <div className="flex items-center space-x-[15px] md:space-x-[30px] rtl:space-x-reverse">
-                        <div className="flex items-center space-x-[8px] rtl:space-x-reverse">
-                          <i className="flaticon-user-1"></i>
-                          <p>{value.author}</p>
-                        </div>
+      {/*              <div*/}
+      {/*                className="blog-card-border bg-white rounded-[20px] py-[40px] px-[30px] relative mt-[-16px] transition duration-500 ease-in-out group-hover:bg-violet-50">*/}
+      {/*                <p className="uppercase text-[15px] mb-[10px]">{value.category}</p>*/}
 
-                        <div className="flex items-center space-x-[8px] rtl:space-x-reverse">
-                          <i className="flaticon-calendar"></i>
-                          <p>{value.date}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-            </div>
-          )}
+      {/*                <h3 className="text-[20px] xl:text-[22px] leading-[32px] mb-[15px]">*/}
+      {/*                  <Link href={value.previewLink}*/}
+      {/*                        className="transition duration-500 ease-in-out hover:text-primary">*/}
+      {/*                    {value.title}*/}
+      {/*                  </Link>*/}
+      {/*                </h3>*/}
 
-          <div className="text-center mt-[30px] md:mt-[40px]" data-aos="fade-in" data-aos-delay="100" data-aos-duration="600" data-aos-once="false">
-            <Link
-              href="/blog"
-              className="py-[15px] px-[30px] inline-block rounded-[6px] bg-primary text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-black-color hover:text-white"
-            >
-              See All News
-            </Link>
-          </div>
-        </div>
-      </div>
+      {/*                <div className="flex items-center space-x-[15px] md:space-x-[30px] rtl:space-x-reverse">*/}
+      {/*                  <div className="flex items-center space-x-[8px] rtl:space-x-reverse">*/}
+      {/*                    <i className="flaticon-user-1"></i>*/}
+      {/*                    <p>{value.author}</p>*/}
+      {/*                  </div>*/}
+
+      {/*                  <div className="flex items-center space-x-[8px] rtl:space-x-reverse">*/}
+      {/*                    <i className="flaticon-calendar"></i>*/}
+      {/*                    <p>{value.date}</p>*/}
+      {/*                  </div>*/}
+      {/*                </div>*/}
+      {/*              </div>*/}
+      {/*            </div>*/}
+      {/*          ))}*/}
+      {/*      </div>*/}
+      {/*    )}*/}
+
+      {/*    <div className="text-center mt-[30px] md:mt-[40px]" data-aos="fade-in" data-aos-delay="100"*/}
+      {/*         data-aos-duration="600" data-aos-once="false">*/}
+      {/*      <Link*/}
+      {/*        href="/blog"*/}
+      {/*        className="py-[15px] px-[30px] inline-block rounded-[6px] bg-primary text-white font-semibold text-[16px] md:text-[18px] transition duration-500 ease-in-out hover:bg-black-color hover:text-white"*/}
+      {/*      >*/}
+      {/*        See All News*/}
+      {/*      </Link>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </>
   )
 }
 
-export default OurLatestBlog
+export const getStaticProps: GetStaticProps = async () => {
+  let settings
+  let posts: GhostPostsOrPages | []
+
+  console.time('Index - getStaticProps')
+
+  try {
+    settings = await getAllSettings()
+    posts = await getAllPosts()
+  } catch (error) {
+    throw new Error('Index creation failed.')
+  }
+
+  const cmsData = {
+    settings,
+    posts,
+    seoImage: await seoImage({ siteUrl: settings.processEnv.siteUrl }),
+    bodyClass: BodyClass({ isHome: true }),
+  }
+
+  console.timeEnd('Index - getStaticProps')
+
+  return {
+    props: {
+      cmsData,
+    },
+    ...(processEnv.isr.enable && { revalidate: processEnv.isr.revalidate }), // re-generate at most once every revalidate second
+  }
+}

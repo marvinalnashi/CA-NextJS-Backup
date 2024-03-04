@@ -121,7 +121,7 @@ export default function Index({ cmsData }: IndexProps) {
 
             <Testimonials />
 
-            <OurLatestBlog />
+            <OurLatestBlog  cmsData={cmsData}/>
 
             <Newsletter />
 
