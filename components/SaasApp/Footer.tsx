@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                 >
                   {navLinkData &&
                     navLinkData.map((value, i) => (
-                      <li className="inline-block font-semibold text-slate-300 hover:text-primary-color" key={i}>
+                      <li className="inline-block font-semibold text-slate-300 hover:text-primary" key={i}>
                         <Link href={value.link}>{value.text}</Link>
                       </li>
                     ))}
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
             <div className="text-center md:text-start" data-aos="fade-in" data-aos-delay="300" data-aos-duration="600" data-aos-once="false">
               <p className="text-slate-300">
                 © <span className="text-white">Plama</span>. All Rights Reserved by{' '}
-                <a href="https://envytheme.com/" target="_blank" className="text-white hover:text-primary-color">
+                <a href="https://envytheme.com/" target="_blank" className="text-white hover:text-primary">
                   EnvyTheme
                 </a>
               </p>

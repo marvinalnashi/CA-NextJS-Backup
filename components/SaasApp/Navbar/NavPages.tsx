@@ -29,8 +29,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/features/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/features/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/features/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Features
@@ -40,8 +40,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/contact/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/contact/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/contact/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Contact
@@ -51,8 +51,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/blog/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/blog/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/blog/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Blog
@@ -62,8 +62,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/blog/blog-details/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/blog/blog-details/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/blog/blog-details/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Blog Details
@@ -73,8 +73,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/login/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/login/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/login/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Login
@@ -84,8 +84,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/register/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/register/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/register/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Register
@@ -95,8 +95,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/forgot-password/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/forgot-password/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/forgot-password/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Forgot Password
@@ -106,8 +106,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/download/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/download/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/download/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Download
@@ -117,8 +117,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/thank-you/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/thank-you/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/thank-you/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Thank you
@@ -128,8 +128,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/team/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/team/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/team/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Team
@@ -139,7 +139,7 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/faq/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${currentRoute === '/faq/' ? 'text-primary-color' : 'text-slate-200'}`}
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${currentRoute === '/faq/' ? 'text-primary' : 'text-slate-200'}`}
                 >
                   FAQ
                 </Link>
@@ -148,8 +148,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/privacy-policy/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/privacy-policy/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/privacy-policy/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Privacy Policy
@@ -159,8 +159,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/terms-conditions/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/terms-conditions/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/terms-conditions/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Terms & Conditions
@@ -170,7 +170,7 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/404/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${currentRoute === '/404/' ? 'text-primary-color' : 'text-slate-200'}`}
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${currentRoute === '/404/' ? 'text-primary' : 'text-slate-200'}`}
                 >
                   404 Error Page
                 </Link>
@@ -179,8 +179,8 @@ const NavPages: React.FC = () => {
               <li>
                 <Link
                   href="/coming-soon/"
-                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary-color ${
-                    currentRoute === '/coming-soon/' ? 'text-primary-color' : 'text-slate-200'
+                  className={`text-[15px] md:text-[16px] font-medium transition-all hover:text-primary ${
+                    currentRoute === '/coming-soon/' ? 'text-primary' : 'text-slate-200'
                   }`}
                 >
                   Coming Soon

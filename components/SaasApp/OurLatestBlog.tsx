@@ -56,11 +56,11 @@ const OurLatestBlog: React.FC = () => {
                       <Image src={value.image} alt="blog" className="rounded-t-[20px]" width={1270} height={900} />
                     </Link>
 
-                    <div className="bg-white rounded-[20px] py-[40px] px-[30px] relative mt-[-16px] transition duration-500 ease-in-out group-hover:bg-violet-50">
+                    <div className="blog-card-border bg-white rounded-[20px] py-[40px] px-[30px] relative mt-[-16px] transition duration-500 ease-in-out group-hover:bg-violet-50">
                       <p className="uppercase text-[15px] mb-[10px]">{value.category}</p>
 
                       <h3 className="text-[20px] xl:text-[22px] leading-[32px] mb-[15px]">
-                        <Link href={value.previewLink} className="transition duration-500 ease-in-out hover:text-primary-color">
+                        <Link href={value.previewLink} className="transition duration-500 ease-in-out hover:text-primary">
                           {value.title}
                         </Link>
                       </h3>

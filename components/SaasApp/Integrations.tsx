@@ -33,7 +33,7 @@ const Integrations: React.FC = () => {
 
             <div className="space-y-[30px] md:space-y-[50px]">
               <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" data-aos-once="false">
-                <h6 className="text-primary-color uppercase text-[16px] md:text-[18px] font-medium mb-[5px]">integrations</h6>
+                <h6 className="text-primary uppercase text-[16px] md:text-[18px] font-medium mb-[5px]">integrations</h6>
                 <h2 className="text-[28px] md:text-[36px] leading-[36px] md:leading-[45px] mb-[20px]">Seamlessly integrate all your tools under the ClickUp umbrella</h2>
                 <p>
                   A task management application provides a centralized platform to organize and track all your tasks in one place. It helps you prioritize, categorize, and allocate

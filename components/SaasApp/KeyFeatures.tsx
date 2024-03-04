@@ -69,7 +69,7 @@ const KeyFeatures: React.FC = () => {
             data-aos-duration="600"
             data-aos-once="false"
           >
-            <h6 className="text-primary-color uppercase text-[16px] md:text-[18px] font-medium mb-[5px]">
+            <h6 className="text-primary uppercase text-[16px] md:text-[18px] font-medium mb-[5px]">
               Key Features
             </h6>
             <h2 className="text-[28px] md:text-[36px] leading-[36px] md:leading-[45px]">

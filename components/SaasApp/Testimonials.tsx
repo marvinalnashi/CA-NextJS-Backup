@@ -144,7 +144,7 @@ const Testimonials: React.FC = () => {
             data-aos-duration="600"
             data-aos-once="false"
           >
-            <h6 className="text-primary-color uppercase text-[16px] md:text-[18px] font-medium mb-[5px]">testimonials</h6>
+            <h6 className="text-primary uppercase text-[16px] md:text-[18px] font-medium mb-[5px]">testimonials</h6>
             <h2 className="text-[28px] md:text-[36px] leading-[36px] md:leading-[45px]">Most of our satisfied clients leave their feedback</h2>
           </div>
 
@@ -179,7 +179,7 @@ const Testimonials: React.FC = () => {
                 {testimonialsData &&
                   testimonialsData.map((value, i) => (
                     <SwiperSlide key={i}>
-                      <div className="bg-white rounded-[20px] py-[50px] md:py-[60px] px-[30px] md:px-[50px]">
+                      <div className="general-card-border bg-white rounded-[20px] py-[50px] md:py-[60px] px-[30px] md:px-[50px]">
                         <div className="flex items-center space-x-[10px] rtl:space-x-reverse mb-[20px] md:mb-[30px]">
                           <h5 className="text-[18px]">{value.ratingTitle}</h5>
 

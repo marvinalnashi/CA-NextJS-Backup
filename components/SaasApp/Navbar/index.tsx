@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
             <div className="navbar-collapse flex self-center grow basis-auto md:space-x-[20px] lg:space-x-[50px] xl:space-x-[70px] 2xl:space-x-[100px] rtl:space-x-reverse">
               <ul className="navbar-nav self-center flex-row ml-auto rtl:ml-0 rtl:mr-auto md:flex md:space-x-[15px] lg:space-x-[25px] xl:space-x-[35px] 2xl:space-x-[50px] rtl:space-x-reverse">
                 <li className="py-[8px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] relative group">
-                  <Link href="#home" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary-color">
+                  <Link href="#home" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary">
                     Home
                   </Link>
                 </li>
@@ -69,25 +69,25 @@ const Navbar: React.FC = () => {
                 <NavPages />
 
                 <li className="py-[8px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] relative group">
-                  <Link href="#about" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary-color">
+                  <Link href="#about" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary">
                     About
                   </Link>
                 </li>
 
                 <li className="py-[8px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] relative group">
-                  <Link href="#features" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary-color">
+                  <Link href="#features" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary">
                     Features
                   </Link>
                 </li>
 
                 <li className="py-[8px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] relative group">
-                  <Link href="#pricing" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary-color">
+                  <Link href="#pricing" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary">
                     Pricing
                   </Link>
                 </li>
 
                 <li className="py-[8px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] relative group">
-                  <Link href="#blog" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary-color">
+                  <Link href="#blog" className="text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary">
                     Blog
                   </Link>
                 </li>
@@ -95,8 +95,8 @@ const Navbar: React.FC = () => {
                 <li className="py-[8px] lg:py-[15px] xl:py-[35px] 2xl:py-[38px] relative group">
                   <Link
                     href="/contact/"
-                    className={`text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary-color ${
-                      currentRoute === '/contact/' ? 'text-primary-color' : ''
+                    className={`text-[16px] md:text-[16px] lg:text-[18px] font-medium transition-all hover:text-primary ${
+                      currentRoute === '/contact/' ? 'text-primary' : ''
                     }`}
                   >
                     Contact
@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
               <div className="other-options self-center space-x-[20px] lg:space-x-[25px] xl:space-x-[45px] rtl:space-x-reverse">
                 <Link
                   href="/login"
-                  className="text-[16px] md:text-[15px] lg:text-[18px] inline-block text-primary-color font-semibold transition duration-500 ease-in-out hover:text-blue-950"
+                  className="text-[16px] md:text-[15px] lg:text-[18px] inline-block text-primary font-semibold transition duration-500 ease-in-out hover:text-blue-950"
                 >
                   Log In
                 </Link>

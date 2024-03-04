@@ -47,7 +47,7 @@ const AboutApp: React.FC = () => {
                   {featuresData &&
                     featuresData.slice(0, 3).map((value, i) => (
                       <div className="flex space-x-[18px] rtl:space-x-reverse group" key={i}>
-                        <div className="bg-neutral-100 w-[60px] h-[60px] leading-[60px] rounded-full text-center shrink-0 text-primary-color text-[30px] transition duration-500 ease-in-out group-hover:bg-primary group-hover:text-white">
+                        <div className="bg-neutral-100 w-[60px] h-[60px] leading-[60px] rounded-full text-center shrink-0 text-primary text-[30px] transition duration-500 ease-in-out group-hover:bg-primary group-hover:text-white">
                           <i className={value.icon}></i>
                         </div>
                         <div>
@@ -75,7 +75,7 @@ const AboutApp: React.FC = () => {
 
                 <Link
                   href="#features"
-                  className="inline-block text-primary-color font-semibold text-[16px] md:text-[18px] underline underline-offset-1 transition duration-500 ease-in-out hover:text-black-color"
+                  className="inline-block text-primary font-semibold text-[16px] md:text-[18px] underline underline-offset-1 transition duration-500 ease-in-out hover:text-black-color"
                 >
                   See All Features
                 </Link>
