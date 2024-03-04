@@ -1,24 +1,23 @@
-import React from 'react'
-import { getAllPosts, getAllSettings, GhostSettings, GhostPostsOrPages } from '@lib/ghost'
-import {HomePostCard} from "@components/HomePostCard";
+import React from 'react';
+import { HomePostCard } from "@components/HomePostCard";
+import { GhostPostsOrPages, GhostSettings } from '@lib/ghost';
 
-export interface HomeBlogProps {
-  posts: GhostPostsOrPages
-  settings: GhostSettings
-  bodyClass: string
+interface HomeBlogProps {
+  posts: GhostPostsOrPages;
+  settings: GhostSettings;
+  bodyClass: string;
 }
 
 const HomeBlog: React.FC<HomeBlogProps> = ({ posts, settings, bodyClass }) => {
   return (
-      <div className="inner">
-        <div className="post-feed">
-          {posts.map((post, i) => (
-            <HomePostCard key={post.id} {...{ settings, post, num: i }} />
-          ))}
-        </div>
+    <div className="inner">
+      <div className="post-feed grid grid-cols-1 gap-[25px]">
+        {posts.map((post, i) => (
+          <HomePostCard key={post.id} settings={settings} post={post} num={i} aosDelay={`${100 * (i + 1)}`} />
+        ))}
       </div>
-  )
+    </div>
+  );
 }
-
 
 export default HomeBlog;

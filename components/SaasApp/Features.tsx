@@ -6,7 +6,7 @@ const featuresData = [
   {
     id: '1',
     icon: 'flaticon-smartphone',
-    title: 'User Frindly',
+    title: 'User Friendly',
     shortText: 'Introducing our revolutionary SaaS App, designed to unlock your business potential and propel you towards success. With its powerful features',
     aosDelay: '100',
   },

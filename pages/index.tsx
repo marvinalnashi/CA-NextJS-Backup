@@ -96,8 +96,8 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   return {
     props: {
       cmsData,
-      settings, // From specificPosts
-      posts: specificPosts, // Overriding with specificPosts
+      settings,
+      posts: specificPosts,
       bodyClass: BodyClass({}),
     },
     ...(processEnv.isr.enable && { revalidate: processEnv.isr.revalidate }),
