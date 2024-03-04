@@ -1,18 +1,12 @@
-"use client";
+'use client'
 
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import Link from 'next/link'
 
 const Yearly: React.FC = () => {
   return (
     <>
-      <div 
-        className="mt-[30px] md:mt-[50px]"
-        data-aos="fade-up"
-        data-aos-delay="100"
-        data-aos-duration="600"
-        data-aos-once="false"
-      >
+      <div className="mt-[30px] md:mt-[50px]" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" data-aos-once="false">
         <div className="container">
           <div className="grid gap-[25px] items-center grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
             <div className="group border-2 border-[#F9F3EF] rounded-[20px] bg-white relative overflow-hidden p-[30px] md:p-[60px] lg:p-[30px] xl:p-[40px] 2xl:p-[60px] space-y-[30px] md:space-y-[40px] lg:space-y-[40px] xl:space-y-[50px] transition duration-500 ease-in-out hover:border-[#0A65FC]">
@@ -23,10 +17,7 @@ const Yearly: React.FC = () => {
 
               <div>
                 <h2 className="text-primary-color text-[32px] leading-[0] mb-[25px]">
-                  Free{" "}
-                  <span className="text-[15px] text-[#384179] font-normal">
-                    /Forever
-                  </span>
+                  Free <span className="text-[15px] text-[#384179] font-normal">/Forever</span>
                 </h2>
                 <Link
                   href="#"
@@ -37,9 +28,7 @@ const Yearly: React.FC = () => {
               </div>
 
               <div>
-                <h4 className="text-[18px] font-semibold mb-[15px]">
-                  Task management with:
-                </h4>
+                <h4 className="text-[18px] font-semibold mb-[15px]">Task management with:</h4>
 
                 <ul className="space-y-[10px]">
                   <li className="flex items-center space-x-[10px] rtl:space-x-reverse">
@@ -78,10 +67,7 @@ const Yearly: React.FC = () => {
 
               <div>
                 <h2 className="text-primary-color text-[32px] leading-[0] mb-[25px]">
-                  $19.99{" "}
-                  <span className="text-[15px] text-[#384179] font-normal">
-                    /Yearly
-                  </span>
+                  $19.99 <span className="text-[15px] text-[#384179] font-normal">/Yearly</span>
                 </h2>
                 <Link
                   href="#"
@@ -92,9 +78,7 @@ const Yearly: React.FC = () => {
               </div>
 
               <div>
-                <h4 className="text-[18px] font-semibold mb-[15px]">
-                  Task management with:
-                </h4>
+                <h4 className="text-[18px] font-semibold mb-[15px]">Task management with:</h4>
 
                 <ul className="space-y-[10px]">
                   <li className="flex items-center space-x-[10px] rtl:space-x-reverse">
@@ -141,10 +125,7 @@ const Yearly: React.FC = () => {
 
               <div>
                 <h2 className="text-primary-color text-[32px] leading-[0] mb-[25px]">
-                  $29.99{" "}
-                  <span className="text-[15px] text-[#384179] font-normal">
-                    /Yearly
-                  </span>
+                  $29.99 <span className="text-[15px] text-[#384179] font-normal">/Yearly</span>
                 </h2>
                 <Link
                   href="#"
@@ -155,9 +136,7 @@ const Yearly: React.FC = () => {
               </div>
 
               <div>
-                <h4 className="text-[18px] font-semibold mb-[15px]">
-                  Task management with:
-                </h4>
+                <h4 className="text-[18px] font-semibold mb-[15px]">Task management with:</h4>
 
                 <ul className="space-y-[10px]">
                   <li className="flex items-center space-x-[10px] rtl:space-x-reverse">
@@ -187,7 +166,7 @@ const Yearly: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Yearly;
+export default Yearly

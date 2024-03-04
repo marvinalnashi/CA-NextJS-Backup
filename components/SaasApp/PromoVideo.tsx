@@ -1,38 +1,23 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
-import FsLightbox from "fslightbox-react";
-import Image from "next/image";
+import React, { useState } from 'react'
+import FsLightbox from 'fslightbox-react'
+import Image from 'next/image'
 
-import promoVideoThumb from "/public/images/promo-video-thumb.jpg";
+import promoVideoThumb from '/public/images/promo-video-thumb.jpg'
 
 const PromoVideo: React.FC = () => {
   // To open the lightbox change the value of the "toggler" prop.
-  const [toggler, setToggler] = useState<boolean>(false);
+  const [toggler, setToggler] = useState<boolean>(false)
 
   return (
     <>
       {/* Use here youtube Embed video link */}
-      <FsLightbox
-        toggler={toggler}
-        sources={[
-          "https://www.youtube.com/embed/kSJYu4njW8s?si=Af-uo9UkKXgl-bG7",
-        ]}
-      />
+      <FsLightbox toggler={toggler} sources={['https://www.youtube.com/embed/kSJYu4njW8s?si=Af-uo9UkKXgl-bG7']} />
 
       <div className="container">
-        <div 
-          className="max-w-[1100px] mx-auto relative"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="600"
-          data-aos-once="false"
-        >
-          <Image
-            src={promoVideoThumb}
-            alt="Promo Video Thumb"
-            className="rounded-[20px]"
-          />
+        <div className="max-w-[1100px] mx-auto relative" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" data-aos-once="false">
+          <Image src={promoVideoThumb} alt="Promo Video Thumb" className="rounded-[20px]" />
 
           <div className="absolute top-1/2 -translate-y-2/4 right-0 left-0 w-full text-center ">
             <div
@@ -45,7 +30,7 @@ const PromoVideo: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default PromoVideo;
+export default PromoVideo

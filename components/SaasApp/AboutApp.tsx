@@ -1,34 +1,31 @@
-"use client";
+'use client'
 
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import aboutAppImg from "/public/images/saas-app/about-app.png";
+import aboutAppImg from '/public/images/saas-app/about-app.png'
 
 const featuresData = [
   {
-    id: "1",
-    icon: "flaticon-cloud-computing",
-    title: "Free Download App",
-    shortText:
-      "Just log in with your mail account from play store and using whatever you want for your business purpose.",
+    id: '1',
+    icon: 'flaticon-cloud-computing',
+    title: 'Free Download App',
+    shortText: 'Just log in with your mail account from play store and using whatever you want for your business purpose.',
   },
   {
-    id: "2",
-    icon: "flaticon-translation",
-    title: "Trusted and Reliable",
-    shortText:
-      "Just log in with your mail account from play store and using whatever you want for your business purpose.",
+    id: '2',
+    icon: 'flaticon-translation',
+    title: 'Trusted and Reliable',
+    shortText: 'Just log in with your mail account from play store and using whatever you want for your business purpose.',
   },
   {
-    id: "3",
-    icon: "flaticon-cloud",
-    title: "Cloud Storage",
-    shortText:
-      "Just log in with your mail account from play store and using whatever you want for your business purpose.",
+    id: '3',
+    icon: 'flaticon-cloud',
+    title: 'Cloud Storage',
+    shortText: 'Just log in with your mail account from play store and using whatever you want for your business purpose.',
   },
-];
+]
 
 const AboutApp: React.FC = () => {
   return (
@@ -37,28 +34,16 @@ const AboutApp: React.FC = () => {
         <div className="container xl:p-0 xl:max-w-[1920px]">
           <div className="grid gap-[40px] items-center grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
             <div className="space-y-[30px] md:space-y-[50px] lg:max-w-[630px] lg:mr-auto xl:mr-0 lg:ml-auto rtl:lg:mr-auto">
-              <div
-                data-aos="fade-right"
-                data-aos-delay="100"
-                data-aos-duration="600"
-                data-aos-once="false"
-              >
-                <h2 className="text-[28px] md:text-[36px] leading-[36px] md:leading-[45px] mb-[20px]">
-                  Take Charge of Your Success with our Game-Changing SaaS App
-                </h2>
+              <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="600" data-aos-once="false">
+                <h2 className="text-[28px] md:text-[36px] leading-[36px] md:leading-[45px] mb-[20px]">Take Charge of Your Success with our Game-Changing SaaS App</h2>
                 <p>
-                  At the heart of every successful business lies efficiency, and our SaaS App is here to redefine it. Experience a streamlined and agile approach to your operations as our app simplifies and automates repetitive tasks
+                  At the heart of every successful business lies efficiency, and our SaaS App is here to redefine it. Experience a streamlined and agile approach to your operations
+                  as our app simplifies and automates repetitive tasks
                 </p>
               </div>
 
               {featuresData && (
-                <div
-                  className="space-y-[30px]"
-                  data-aos="fade-right"
-                  data-aos-delay="200"
-                  data-aos-duration="600"
-                  data-aos-once="false"
-                >
+                <div className="space-y-[30px]" data-aos="fade-right" data-aos-delay="200" data-aos-duration="600" data-aos-once="false">
                   {featuresData &&
                     featuresData.slice(0, 3).map((value, i) => (
                       <div className="flex space-x-[18px] rtl:space-x-reverse group" key={i}>
@@ -97,24 +82,14 @@ const AboutApp: React.FC = () => {
               </div>
             </div>
 
-            <div
-              className="text-center"
-              data-aos="fade-left"
-              data-aos-delay="400"
-              data-aos-duration="600"
-              data-aos-once="false"
-            >
-              <Image
-                src={aboutAppImg}
-                alt="About App"
-                className="inline-block"
-              />
+            <div className="text-center" data-aos="fade-left" data-aos-delay="400" data-aos-duration="600" data-aos-once="false">
+              <Image src={aboutAppImg} alt="About App" className="inline-block" />
             </div>
           </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AboutApp;
+export default AboutApp

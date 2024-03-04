@@ -9,17 +9,17 @@ import * as gtag from '../lib/gtag'
 
 import '@styles/screen.css'
 import '@styles/screen-fixings.css'
-import '@styles/dark-mode.css'
+// import '@styles/dark-mode.css'
 import '@styles/prism.css'
 import '@styles/toc.css'
-import '@styles/portfolio.css'
-import '@styles/tags.css'
-import '@styles/home.css'
+// import '@styles/portfolio.css'
+// import '@styles/tags.css'
+// import '@styles/home.css'
 import 'remixicon/fonts/remixicon.css'
 import '../public/css/navbar.css'
 import '../public/fonts/flaticon_mycollection.css'
-import 'swiper/css/bundle';
-import "./globals.css";
+import 'swiper/css/bundle'
+import '@styles/globals.scss'
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
